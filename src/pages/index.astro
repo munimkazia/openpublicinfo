@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Public Info, Public Access">
+	<header class="container">
+		<h1>Public Info,<br/>Public Access.</h1>
+		<p class="lead">Stop providing public information exclusively on private social networks.</p>
+		<a href="https://my.uplift.ie/petitions/public-info-public-access-stop-providing-public-info-on-private-social-networks" class="cta-button">Sign the Petition</a>
+	</header>
+
+	<main class="container">
+		<section id="problem">
+			<h2>The Problem</h2>
+			<p>
+				Many Irish government services and public bodies now use private social networks as their <strong>primary or only</strong> channel for real-time updates. 
+			</p>
+			<p>
+				Whether it's train delays from <strong>Irish Rail</strong>, weather warnings from <strong>Met Éireann</strong>, or local council alerts, vital public information is being locked behind "walled gardens."
+			</p>
+			
+			<div class="card">
+				<h3>Why this is broken:</h3>
+				<ul>
+					<li><strong>Accessibility:</strong> Social networks are often not fully accessible to screen readers or those with cognitive disabilities.</li>
+					<li><strong>Privacy:</strong> Citizens should not have to be tracked by a private corporation to know if their train is on time.</li>
+					<li><strong>Account Requirements:</strong> Many platforms now limit viewing content unless you are logged in, effectively taxing public info with personal data.</li>
+					<li><strong>Fragility:</strong> A change in a private company's algorithm or API shouldn't break the government's ability to reach its people.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="examples">
+			<h2>Real-World Impact</h2>
+			<p>
+				Imagine a tourist arriving in Dublin, or an elderly citizen without a smartphone. If <em>Irish Rail</em> only posts about a major service disruption on Twitter, these people are left in the dark. Public information must be <strong>publicly accessible by default</strong>.
+			</p>
+		</section>
+
+		<section id="solutions">
+			<h2>A Technical Roadmap</h2>
+			<p>
+				We aren't asking the government to stop using social media. We are asking them to change the <strong>Source of Truth</strong>.
+			</p>
+			
+			<h3>1. The Hub & Spoke Model</h3>
+			<p>
+				Government updates should originate on <code>.gov.ie</code> or service-owned domains. This "Hub" then pushes updates to the "Spokes" (Twitter, Mastodon, Email).
+			</p>
+
+			<h3>2. Open Standards (RSS/JSON)</h3>
+			<p>
+				By providing simple RSS or JSON feeds, the government allows any app, website, or developer to build tools that help citizens, without relying on a single private platform.
+			</p>
+
+			<div class="card">
+				<h3>The "Internal-First" Workflow:</h3>
+				<ol>
+					<li>Official posts update to internal CMS.</li>
+					<li>Website updates immediately.</li>
+					<li>RSS/Atom feed is generated.</li>
+					<li>Automated tools push content to social media APIs.</li>
+				</ol>
+			</div>
+		</section>
+
+		<section id="cta">
+			<h2>Take Action</h2>
+			<p>
+				Join over [X] citizens demanding that our public services return to being truly public.
+			</p>
+			<a href="https://my.uplift.ie/petitions/public-info-public-access-stop-providing-public-info-on-private-social-networks" class="cta-button">Sign the Uplift Petition</a>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.lead {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: var(--muted);
+		max-width: 600px;
+	}
+
+	ul, ol {
+		margin-bottom: 1.5rem;
+		padding-left: 1.5rem;
+	}
+
+	li {
+		margin-bottom: 0.5rem;
+	}
+
+	code {
+		background: #eee;
+		padding: 0.2rem 0.4rem;
+		border-radius: 4px;
+		font-family: monospace;
+	}
+</style>
