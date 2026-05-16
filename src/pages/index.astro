@@ -114,25 +114,89 @@ import Layout from '../layouts/Layout.astro';
         <!-- The Culprits -->
         <div>
           <h3 class="text-2xl font-black text-brand-accent mb-6 uppercase">The Culprits: Gated Information</h3>
-          <div class="border-l-4 border-brand-accent pl-6 space-y-8">
+          <div class="border-l-4 border-brand-accent pl-6 space-y-12">
+            <!-- Irish Rail -->
             <div>
               <h4 class="text-xl font-bold mb-2">Irish Rail (Iarnród Éireann)</h4>
               <p class="text-slate-700 mb-4 text-lg">
-                Frequently treats X as their primary notification hub. Critical real-time updates for "additional services" or unscheduled delays often appear on social media while their official site remains stagnant.
+                The most frequent offender. During major events (GAA matches, concerts), critical "additional services" and last-minute delay info often appear <strong>only</strong> on X, while the official "Live Map" and "Service Updates" pages remain blank.
               </p>
               <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://x.com/IrishRail" class="text-brand-accent underline">Where the info is (X/Twitter)</a>
-                <a href="https://www.irishrail.ie/en-ie/news/service-updates" class="text-slate-500 underline">Where it should be (Official Site)</a>
+                <a href="https://x.com/IrishRail" class="text-brand-accent underline">Info on X/Twitter</a>
+                <a href="https://www.irishrail.ie/en-ie/news/service-updates" class="text-slate-500 underline">Official Site</a>
               </div>
             </div>
-            <!-- More culprits can be added here -->
+
+            <!-- Dublin Bus -->
+            <div>
+              <h4 class="text-xl font-bold mb-2">Dublin Bus</h4>
+              <p class="text-slate-700 mb-4 text-lg">
+                While they have a news center, immediate "on-the-street" disruption alerts are funnelled through their Twitter account. If a bus isn't coming due to a sudden incident, you're expected to check a private social feed to find out why.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
+                <a href="https://x.com/dublinbusnews" class="text-brand-accent underline">Info on X/Twitter</a>
+                <a href="https://www.dublinbus.ie/news-centre/service-updates" class="text-slate-500 underline">Official Site</a>
+              </div>
+            </div>
+
+            <!-- Bus Éireann -->
+            <div>
+              <h4 class="text-xl font-bold mb-2">Bus Éireann</h4>
+              <p class="text-slate-700 mb-4 text-lg">
+                National and regional service disruptions are frequently posted to social media first. Their website's regional breakdown is often harder to navigate and slower to update than their central Twitter feed.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
+                <a href="https://x.com/Buseireann" class="text-brand-accent underline">Info on X/Twitter</a>
+                <a href="https://www.buseireann.ie/inner.php?id=122" class="text-slate-500 underline">Official Site</a>
+              </div>
+            </div>
+
+            <!-- Go-Ahead Ireland -->
+            <div>
+              <h4 class="text-xl font-bold mb-2">Go-Ahead Ireland</h4>
+              <p class="text-slate-700 mb-4 text-lg">
+                Explicitly uses social media for "real-time incidents" while reserving their website for long-term planned changes. This creates a direct barrier for citizens without social media accounts during urgent travel delays.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
+                <a href="https://x.com/GoAheadIreland" class="text-brand-accent underline">Info on X/Twitter</a>
+                <a href="https://www.goaheadireland.ie/service-updates" class="text-slate-500 underline">Official Site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beyond Transport -->
+        <div>
+          <h3 class="text-2xl font-black text-slate-500 mb-6 uppercase">The Wider Problem: Beyond Transport</h3>
+          <div class="border-l-4 border-slate-500 pl-6 space-y-12">
+            <div>
+              <h4 class="text-xl font-bold mb-2">Met Éireann</h4>
+              <p class="text-slate-700 mb-4 text-lg">
+                While they have an excellent warnings page, the most granular, real-time commentary on developing weather events often hits their social media feed first, leaving the official site as a static secondary source.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
+                <a href="https://x.com/MetEireann" class="text-slate-500 underline">Info on X/Twitter</a>
+                <a href="https://www.met.ie/warnings" class="text-slate-500 underline">Official Site</a>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-xl font-bold mb-2">Local Authorities & Gardaí</h4>
+              <p class="text-slate-700 mb-4 text-lg">
+                From sudden road closures to water main bursts, local councils and the Gardaí routinely use Twitter as their primary 'breaking news' wire. Citizens shouldn't need a social media account to receive urgent public safety or utility alerts.
+              </p>
+              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
+                <a href="https://x.com/gardainfo" class="text-slate-500 underline">Garda Info on X</a>
+                <a href="https://x.com/DubCityCouncil" class="text-slate-500 underline">Dublin City Council on X</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <!-- The Standard -->
         <div>
           <h3 class="text-2xl font-black text-green-700 mb-6 uppercase">The Standard: Doing it Right</h3>
-          <div class="border-l-4 border-green-700 pl-6 space-y-8">
+          <div class="border-l-4 border-green-700 pl-6 space-y-12">
             <div>
               <h4 class="text-xl font-bold mb-2">Luas</h4>
               <p class="text-slate-700 mb-4 text-lg">
@@ -142,6 +206,13 @@ import Layout from '../layouts/Layout.astro';
                 <a href="https://www.luas.ie/travel-updates" class="text-green-700 underline">Official Travel Updates</a>
                 <a href="https://x.com/Luas" class="text-slate-500 underline">Social Mirror (X/Twitter)</a>
               </div>
+            </div>
+
+            <div class="bg-green-50 p-6 border border-green-200">
+              <h4 class="text-lg font-bold mb-2 text-green-900 uppercase tracking-tight">The Irony of "Best Practice"</h4>
+              <p class="text-green-800">
+                The <strong>Government of Ireland Design System</strong> explicitly states that the official website must be the "Single Source of Truth." Despite these guidelines, many taxpayer-funded bodies continue to treat private, account-gated social networks as their primary broadcast wire.
+              </p>
             </div>
           </div>
         </div>
