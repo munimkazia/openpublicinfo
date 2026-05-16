@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Technical Brief: Sovereign Public Information | OpenPublicInfo.ie">
+  <main class="py-20">
+    <article class="container-tight prose prose-slate max-w-none">
+      <header class="mb-16 border-b-4 border-brand-text pb-8">
+        <span class="text-brand-accent font-black uppercase tracking-widest text-sm mb-4 block">Official Briefing Document</span>
+        <h1 class="text-5xl md:text-6xl font-black uppercase leading-none mb-6">
+          Sovereign Public<br/> Information Standards
+        </h1>
+        <div class="flex flex-col md:flex-row gap-8 text-sm uppercase font-bold text-slate-500">
+          <div><span class="text-slate-400">To:</span> National Transport Authority (NTA)</div>
+          <div><span class="text-slate-400">Date:</span> May 2026</div>
+          <div><span class="text-slate-400">Ref:</span> OPI-2026-001</div>
+        </div>
+      </header>
+
+      <section class="mb-16">
+        <h2 class="text-3xl font-black uppercase mb-6">Executive Summary</h2>
+        <p class="text-xl leading-relaxed">
+          Current communication practices among Irish public transport providers frequently treat private, third-party social media platforms (specifically X/Twitter) as primary notification hubs for real-time disruptions. This creates a <strong>Two-Tier Information System</strong> that excludes citizens based on platform membership and private data tracking consent.
+        </p>
+        <p class="text-xl leading-relaxed">
+          This brief proposes a <strong>"Source First"</strong> notification standard, mandating that state-owned digital infrastructure serves as the <strong>Single Source of Truth (SSOT)</strong> for all public interest updates.
+        </p>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-3xl font-black uppercase mb-6">1. The Problem: Siloed Real-Time Data</h2>
+        <p>
+          While public transport providers have made strides in publishing static timetable data (GTFS), <strong>unplanned disruption data</strong> remains architecturally siloed. 
+        </p>
+        <ul class="space-y-4">
+          <li><strong>Gated Access:</strong> Vital safety and service updates are increasingly "walled off" behind social media logins.</li>
+          <li><strong>Algorithmic Fragility:</strong> Chronological delivery of urgent info is now subject to private company algorithms, meaning "Live" updates are often seen hours late by users.</li>
+          <li><strong>Regulatory Non-Compliance:</strong> Exclusive social media publishing fails to meet the <em>Public Sector Bodies Accessibility Regulations</em>, as these platforms are not under the control or accessibility auditing of the state.</li>
+        </ul>
+      </section>
+
+      <section class="mb-16 bg-slate-100 p-8 border-l-8 border-brand-text">
+        <h2 class="text-3xl font-black uppercase mb-6 italic text-brand-accent">2. The "Source First" Requirement</h2>
+        <p class="text-lg mb-6">
+          We propose that all NTA-regulated bodies adopt a <strong>Source First Workflow</strong>. Architectural priority must be given to the official state domain.
+        </p>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-bold uppercase text-sm mb-2">Current (Broken) Workflow</h3>
+            <p class="text-sm text-slate-600">Incident &rarr; Manual Tweet &rarr; (Optional) Website Update &rarr; (Delayed) App Update.</p>
+          </div>
+          <div>
+            <h3 class="font-bold uppercase text-sm mb-2 text-brand-accent">Proposed Sovereign Workflow</h3>
+            <p class="text-sm text-brand-text font-bold">Incident &rarr; Central CMS &rarr; Immediate Web/App/Open-API Push &rarr; Automated Social Media Mirror.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-3xl font-black uppercase mb-6">3. Technical Implementation</h2>
+        <h3 class="text-xl font-bold mb-4">3.1 API-Driven Distribution</h3>
+        <p>
+          Disruption alerts should be published as standardized, machine-readable feeds (RSS/JSON/GTFS-Realtime). This allows:
+        </p>
+        <ul>
+          <li><strong>Universal Access:</strong> Third-party apps (Google Maps, Citymapper) can ingest alerts immediately.</li>
+          <li><strong>Local Empowerment:</strong> Local media and community groups can build automated "alert bots" for their areas without manual oversight.</li>
+        </ul>
+
+        <h3 class="text-xl font-bold mb-4 mt-8">3.2 Compliance with Gov Design System</h3>
+        <p>
+          The <em>Government of Ireland Design System</em> already mandates that the official website must be the "Single Source of Truth." This brief calls for the strict enforcement of this standard as a condition for NTA funding and operator contracts.
+        </p>
+      </section>
+
+      <section class="mb-16 border-t-4 border-slate-200 pt-12">
+        <h2 class="text-3xl font-black uppercase mb-6">Recommendations</h2>
+        <ol class="space-y-6">
+          <li class="pl-4">
+            <strong>Mandate SSOT:</strong> Legally require all state-funded bodies to publish real-time alerts to their own domain <em>prior to</em> or <em>simultaneous with</em> third-party networks.
+          </li>
+          <li class="pl-4">
+            <strong>Audit Accessibility:</strong> Conduct a formal audit of how social-media-first communication excludes citizens with disabilities and the elderly.
+          </li>
+          <li class="pl-4">
+            <strong>Standardize Open Feeds:</strong> Provide a unified API endpoint for all NTA-regulated service alerts.
+          </li>
+        </ol>
+      </section>
+
+      <footer class="mt-24 pt-12 border-t border-slate-200 text-slate-500 italic">
+        <p>This document was drafted by the OpenPublicInfo.ie initiative. For technical consultation or further briefing, contact <a href="mailto:munim2020@gmail.com" class="text-brand-accent underline">Munim Kazia</a>.</p>
+      </footer>
+    </article>
+  </main>
+</Layout>
