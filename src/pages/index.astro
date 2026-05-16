@@ -29,15 +29,12 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Stance Clarification Box -->
         <div class="bg-brand-text text-white p-8 mb-12 border-t-8 border-brand-accent">
-          <h3 class="text-2xl mb-4 text-brand-accent italic">Let's be clear: This is not anti-social media.</h3>
+          <h3 class="text-2xl mb-4 text-brand-accent italic font-bold uppercase tracking-tight">This is not anti-social media.</h3>
           <p class="text-lg opacity-90 mb-4">
-            We aren't asking the government or transport providers to delete their accounts or stop posting to X, Facebook, or Mastodon. 
+            We aren't asking the government to delete their accounts. We are demanding they stop using them <u>exclusively</u>. 
           </p>
           <p class="text-lg font-bold">
-            We are simply demanding that they stop using them <u>exclusively</u>.
-          </p>
-          <p class="text-md opacity-80 mt-4 italic">
-            Social media should be a <strong>supplement</strong> to public information, not a <strong>gatekeeper</strong> for it.
+            Social media should be a <span class="text-brand-accent underline">supplement</span> to public information, not a gatekeeper for it.
           </p>
         </div>
 
@@ -46,11 +43,11 @@ import Layout from '../layouts/Layout.astro';
         </p>
 
         <p class="text-lg mb-8">
-          This is not an occasional technical glitch; it is an established communication strategy. Whether it is unscheduled rail delays, emergency bus diversions, or essential utility alerts, vital public info is being "walled off" within private ecosystems.
+          This is not an occasional glitch; it is an established communication strategy. Whether it is unscheduled rail delays, emergency bus diversions, or essential utility alerts, vital public info is being "walled off" within private ecosystems.
         </p>
 
         <p class="text-lg">
-          This creates a <strong>two-tier information system</strong>. It excludes the elderly, the privacy-conscious, and anyone who refuses to be tracked by a private corporation just to know if their transport is running.
+          This creates a <strong>two-tier information system</strong>. It excludes the elderly, the privacy-conscious, and anyone who refuses to be tracked by a private corporation just to access basic public services.
         </p>
       </div>
     </section>
@@ -62,7 +59,7 @@ import Layout from '../layouts/Layout.astro';
         
         <div class="grid gap-12">
           <div class="border-t border-slate-700 pt-8">
-            <span class="text-brand-accent font-bold text-5xl mb-4 block">01</span>
+            <span class="text-brand-accent font-bold text-5xl mb-4 block text-outline">01</span>
             <h3 class="text-2xl mb-4">Source-First Notification (SSOT)</h3>
             <p class="text-slate-300 text-lg">
               Official state-owned websites and apps must be the Single Source of Truth. Vital info must be published there <em>before</em> or <em>simultaneously</em> with any third-party network.
@@ -70,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="border-t border-slate-700 pt-8">
-            <span class="text-brand-accent font-bold text-5xl mb-4 block">02</span>
+            <span class="text-brand-accent font-bold text-5xl mb-4 block text-outline">02</span>
             <h3 class="text-2xl mb-4">Platform Neutrality</h3>
             <p class="text-slate-300 text-lg">
               Essential safety, travel, and health notifications must never require a private account, a login, or acceptance of third-party tracking cookies.
@@ -78,12 +75,89 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <div class="border-t border-slate-700 pt-8">
-            <span class="text-brand-accent font-bold text-5xl mb-4 block">03</span>
+            <span class="text-brand-accent font-bold text-5xl mb-4 block text-outline">03</span>
             <h3 class="text-2xl mb-4">Open Data / Sovereign APIs</h3>
             <p class="text-slate-300 text-lg">
               Public bodies must publish standardized RSS or JSON feeds. This allows citizens, independent developers, and local media to distribute info safely without corporate gatekeepers.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Policy Gap (Moved higher up for impact) -->
+    <section class="container-tight mb-24">
+       <div class="bg-green-50 p-8 border border-green-200">
+        <h2 class="text-2xl font-black mb-4 text-green-900 uppercase">The Policy Gap</h2>
+        <p class="text-green-800 text-lg mb-4 leading-relaxed">
+          The <strong>Government of Ireland Design System</strong> explicitly states that the official website must be the "Single Source of Truth."
+        </p>
+        <p class="text-green-800 text-lg">
+          Despite these guidelines, many taxpayer-funded bodies continue to treat private, account-gated social networks as their primary broadcast wire. This isn't just an accessibility issue; it's a direct failure to follow existing state digital standards.
+        </p>
+      </div>
+    </section>
+
+    <!-- The Audit: Culprits & Standards -->
+    <section class="max-w-6xl mx-auto px-6 mb-24">
+      <h2 class="text-4xl mb-12 text-center">The Public Information Audit</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <!-- Culprit 1 -->
+        <div class="p-8 bg-white border border-slate-200 shadow-sm relative">
+          <span class="absolute top-0 right-0 bg-brand-accent text-white px-3 py-1 text-xs font-black uppercase">Gated</span>
+          <h4 class="text-xl font-bold mb-4">Irish Rail</h4>
+          <p class="text-slate-600 mb-6">Frequently posts "additional services" and unscheduled delay alerts exclusively to X, leaving the official news page blank during critical events.</p>
+          <div class="flex gap-4 text-xs font-black uppercase">
+            <a href="https://x.com/IrishRail" class="text-brand-accent underline">Source (X)</a>
+            <a href="https://www.irishrail.ie/en-ie/news/service-updates" class="text-slate-400 underline">Official Page</a>
+          </div>
+        </div>
+
+        <!-- Culprit 2 -->
+        <div class="p-8 bg-white border border-slate-200 shadow-sm relative">
+          <span class="absolute top-0 right-0 bg-brand-accent text-white px-3 py-1 text-xs font-black uppercase">Gated</span>
+          <h4 class="text-xl font-bold mb-4">Dublin Bus</h4>
+          <p class="text-slate-600 mb-6">Immediate disruption alerts are funnelled through social media first. Citizens are often forced to check X to find out why their bus hasn't arrived.</p>
+          <div class="flex gap-4 text-xs font-black uppercase">
+            <a href="https://x.com/dublinbusnews" class="text-brand-accent underline">Source (X)</a>
+            <a href="https://www.dublinbus.ie/news-centre/service-updates" class="text-slate-400 underline">Official Page</a>
+          </div>
+        </div>
+
+        <!-- Culprit 3 -->
+        <div class="p-8 bg-white border border-slate-200 shadow-sm relative">
+          <span class="absolute top-0 right-0 bg-brand-accent text-white px-3 py-1 text-xs font-black uppercase">Gated</span>
+          <h4 class="text-xl font-bold mb-4">Bus Éireann</h4>
+          <p class="text-slate-600 mb-6">Regional service disruptions frequently hit social media before appearing on their hard-to-navigate official service update breakdown.</p>
+          <div class="flex gap-4 text-xs font-black uppercase">
+            <a href="https://x.com/Buseireann" class="text-brand-accent underline">Source (X)</a>
+            <a href="https://www.buseireann.ie/inner.php?id=122" class="text-slate-400 underline">Official Page</a>
+          </div>
+        </div>
+
+        <!-- Culprit 4 -->
+        <div class="p-8 bg-white border border-slate-200 shadow-sm relative">
+          <span class="absolute top-0 right-0 bg-brand-accent text-white px-3 py-1 text-xs font-black uppercase">Gated</span>
+          <h4 class="text-xl font-bold mb-4">Go-Ahead Ireland</h4>
+          <p class="text-slate-600 mb-6">Explicitly categorizes "real-time incidents" as social-media-first, reserving their website for long-term planned changes only.</p>
+          <div class="flex gap-4 text-xs font-black uppercase">
+            <a href="https://x.com/GoAheadIreland" class="text-brand-accent underline">Source (X)</a>
+            <a href="https://www.goaheadireland.ie/service-updates" class="text-slate-400 underline">Official Page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Gold Standard -->
+      <div class="p-8 bg-green-50 border-2 border-green-600 shadow-lg md:w-3/4 mx-auto relative">
+        <span class="absolute top-0 right-0 bg-green-600 text-white px-4 py-1 text-xs font-black uppercase tracking-widest">The Gold Standard</span>
+        <h3 class="text-2xl font-black mb-4 text-green-900">Luas</h3>
+        <p class="text-green-800 text-lg mb-6 leading-relaxed">
+          Luas maintains a clear, accessible "Travel Updates" page on their official website that is updated in lockstep with their social media. They prove that "Source First" is not just possible—it's professional.
+        </p>
+        <div class="flex gap-6 text-sm font-black uppercase tracking-wider">
+          <a href="https://www.luas.ie/travel-updates" class="text-green-700 underline">Live Travel Updates</a>
+          <a href="https://x.com/Luas" class="text-slate-500 underline">Social Mirror (X)</a>
         </div>
       </div>
     </section>
@@ -101,8 +175,8 @@ import Layout from '../layouts/Layout.astro';
 
         <div>
           <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">"Does this create extra work for staff?"</h3>
-          <p class="text-lg text-slate-700 leading-relaxed">
-            Actually, it fixes a broken workflow. Currently, staff often "double-job" by manually posting to social media. A "Source First" approach automates the process: one update to the official system syncs to the website, the app, and social media simultaneously.
+          <p class="text-lg text-slate-700 leading-relaxed italic border-l-4 border-brand-accent pl-6">
+            Actually, it fixes a broken workflow. Currently, staff often "double-job" by manually posting to social media and then eventually updating the website. A <strong>Source First</strong> approach is about <strong>efficiency and automation</strong>: one update to the official CMS syncs to the website, the app, and social media simultaneously. It reduces manual labor while ensuring 100% accuracy.
           </p>
         </div>
 
@@ -111,119 +185,6 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-lg text-slate-700 leading-relaxed">
             Trains are the most visible example, but this is a standard for all public infrastructure—from the Gardaí and local councils to the HSE. Publicly funded information is a public good; it belongs on public infrastructure first.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- The State of Public Information -->
-    <section class="container-tight mb-24">
-      <h2 class="text-4xl mb-12">The State of Public Information</h2>
-      
-      <div class="space-y-16">
-        <!-- The Culprits -->
-        <div>
-          <h3 class="text-2xl font-black text-brand-accent mb-6 uppercase">The Culprits: Gated Information</h3>
-          <div class="border-l-4 border-brand-accent pl-6 space-y-12">
-            <!-- Irish Rail -->
-            <div>
-              <h4 class="text-xl font-bold mb-2">Irish Rail (Iarnród Éireann)</h4>
-              <p class="text-slate-700 mb-4 text-lg">
-                The most frequent offender. During major events (GAA matches, concerts), critical "additional services" and last-minute delay info often appear <strong>only</strong> on X, while the official "Live Map" and "Service Updates" pages remain blank.
-              </p>
-              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://x.com/IrishRail" class="text-brand-accent underline">Info on X/Twitter</a>
-                <a href="https://www.irishrail.ie/en-ie/news/service-updates" class="text-slate-500 underline">Official Site</a>
-              </div>
-            </div>
-
-            <!-- Dublin Bus -->
-            <div>
-              <h4 class="text-xl font-bold mb-2">Dublin Bus</h4>
-              <p class="text-slate-700 mb-4 text-lg">
-                While they have a news center, immediate "on-the-street" disruption alerts are funnelled through their Twitter account. If a bus isn't coming due to a sudden incident, you're expected to check a private social feed to find out why.
-              </p>
-              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://x.com/dublinbusnews" class="text-brand-accent underline">Info on X/Twitter</a>
-                <a href="https://www.dublinbus.ie/news-centre/service-updates" class="text-slate-500 underline">Official Site</a>
-              </div>
-            </div>
-
-            <!-- Bus Éireann -->
-            <div>
-              <h4 class="text-xl font-bold mb-2">Bus Éireann</h4>
-              <p class="text-slate-700 mb-4 text-lg">
-                National and regional service disruptions are frequently posted to social media first. Their website's regional breakdown is often harder to navigate and slower to update than their central Twitter feed.
-              </p>
-              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://x.com/Buseireann" class="text-brand-accent underline">Info on X/Twitter</a>
-                <a href="https://www.buseireann.ie/inner.php?id=122" class="text-slate-500 underline">Official Site</a>
-              </div>
-            </div>
-
-            <!-- Go-Ahead Ireland -->
-            <div>
-              <h4 class="text-xl font-bold mb-2">Go-Ahead Ireland</h4>
-              <p class="text-slate-700 mb-4 text-lg">
-                Explicitly uses social media for "real-time incidents" while reserving their website for long-term planned changes. This creates a direct barrier for citizens without social media accounts during urgent travel delays.
-              </p>
-              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://x.com/GoAheadIreland" class="text-brand-accent underline">Info on X/Twitter</a>
-                <a href="https://www.goaheadireland.ie/service-updates" class="text-slate-500 underline">Official Site</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Beyond Transport -->
-        <div>
-          <h3 class="text-2xl font-black text-slate-500 mb-6 uppercase">The Wider Problem: Beyond Transport</h3>
-          <div class="border-l-4 border-slate-500 pl-6 space-y-12">
-            <div>
-              <h4 class="text-xl font-bold mb-2">Met Éireann</h4>
-              <p class="text-slate-700 mb-4 text-lg">
-                While they have an excellent warnings page, the most granular, real-time commentary on developing weather events often hits their social media feed first, leaving the official site as a static secondary source.
-              </p>
-              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://x.com/MetEireann" class="text-slate-500 underline">Info on X/Twitter</a>
-                <a href="https://www.met.ie/warnings" class="text-slate-500 underline">Official Site</a>
-              </div>
-            </div>
-
-            <div>
-              <h4 class="text-xl font-bold mb-2">Local Authorities & Gardaí</h4>
-              <p class="text-slate-700 mb-4 text-lg">
-                From sudden road closures to water main bursts, local councils and the Gardaí routinely use Twitter as their primary 'breaking news' wire. Citizens shouldn't need a social media account to receive urgent public safety or utility alerts.
-              </p>
-              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://x.com/gardainfo" class="text-slate-500 underline">Garda Info on X</a>
-                <a href="https://x.com/DubCityCouncil" class="text-slate-500 underline">Dublin City Council on X</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- The Standard -->
-        <div>
-          <h3 class="text-2xl font-black text-green-700 mb-6 uppercase">The Standard: Doing it Right</h3>
-          <div class="border-l-4 border-green-700 pl-6 space-y-12">
-            <div>
-              <h4 class="text-xl font-bold mb-2">Luas</h4>
-              <p class="text-slate-700 mb-4 text-lg">
-                Luas maintains a clear, accessible "Travel Updates" page on their official website that is updated in lockstep with their social media presence. They prove that "Source First" is not just possible—it's professional.
-              </p>
-              <div class="flex flex-wrap gap-4 text-sm font-bold uppercase tracking-wider">
-                <a href="https://www.luas.ie/travel-updates" class="text-green-700 underline">Official Travel Updates</a>
-                <a href="https://x.com/Luas" class="text-slate-500 underline">Social Mirror (X/Twitter)</a>
-              </div>
-            </div>
-
-            <div class="bg-green-50 p-6 border border-green-200">
-              <h4 class="text-lg font-bold mb-2 text-green-900 uppercase tracking-tight">The Irony of "Best Practice"</h4>
-              <p class="text-green-800">
-                The <strong>Government of Ireland Design System</strong> explicitly states that the official website must be the "Single Source of Truth." Despite these guidelines, many taxpayer-funded bodies continue to treat private, account-gated social networks as their primary broadcast wire.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -259,4 +220,9 @@ import Layout from '../layouts/Layout.astro';
 <style>
   /* Use Inter font for body */
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+  
+  .text-outline {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+    color: transparent;
+  }
 </style>
