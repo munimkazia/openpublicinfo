@@ -44,32 +44,54 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-lg mb-6">
           We propose that all NTA-regulated bodies adopt a <strong>Source First Workflow</strong>. Architectural priority must be given to the official state domain.
         </p>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 class="font-bold uppercase text-sm mb-2">Current (Broken) Workflow</h3>
-            <p class="text-sm text-slate-600">Incident &rarr; Manual Tweet &rarr; (Optional) Website Update &rarr; (Delayed) App Update.</p>
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="bg-white p-6 shadow-sm border border-slate-200">
+            <h3 class="font-bold uppercase text-xs mb-2 text-slate-400 tracking-widest">Current (Broken) Workflow</h3>
+            <p class="text-sm text-slate-600 font-mono">Incident &rarr; Manual Tweet &rarr; (Optional) Website Update &rarr; (Delayed) App Update.</p>
+            <p class="text-xs text-red-600 mt-4 font-bold">Result: Data Fragmentation & Platform Gating</p>
           </div>
-          <div>
-            <h3 class="font-bold uppercase text-sm mb-2 text-brand-accent">Proposed Sovereign Workflow</h3>
-            <p class="text-sm text-brand-text font-bold">Incident &rarr; Central CMS &rarr; Immediate Web/App/Open-API Push &rarr; Automated Social Media Mirror.</p>
+          <div class="bg-white p-6 shadow-md border-t-4 border-brand-accent">
+            <h3 class="font-bold uppercase text-xs mb-2 text-brand-accent tracking-widest text-brand-text">Proposed Sovereign Workflow</h3>
+            <p class="text-sm text-brand-text font-mono font-bold">Incident &rarr; Central CMS &rarr; Immediate Web/App/Open-API Push &rarr; Automated Social Media Mirror.</p>
+            <p class="text-xs text-green-700 mt-4 font-bold text-brand-text">Result: 100% Reach & Data Integrity</p>
           </div>
         </div>
       </section>
 
       <section class="mb-16">
-        <h2 class="text-3xl font-black uppercase mb-6">3. Technical Implementation</h2>
-        <h3 class="text-xl font-bold mb-4">3.1 API-Driven Distribution</h3>
-        <p>
-          Disruption alerts should be published as standardized, machine-readable feeds (RSS/JSON/GTFS-Realtime). This allows:
+        <h2 class="text-3xl font-black uppercase mb-6">3. Technical Architecture</h2>
+        
+        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.1 Unified Alert Ingestion (The "Hub")</h3>
+        <p class="mb-6">
+          The NTA should implement or mandate a <strong>Unified Alert Ingestion API</strong>. Instead of operators managing disparate social media accounts, they should interface with a single, state-owned Content Management System (CMS) designed for high-availability alert distribution.
         </p>
-        <ul>
-          <li><strong>Universal Access:</strong> Third-party apps (Google Maps, Citymapper) can ingest alerts immediately.</li>
-          <li><strong>Local Empowerment:</strong> Local media and community groups can build automated "alert bots" for their areas without manual oversight.</li>
-        </ul>
+        <div class="bg-slate-50 border border-slate-200 p-6 mb-8 rounded">
+          <h4 class="text-sm font-black uppercase mb-3">Core CMS Requirements:</h4>
+          <ul class="text-sm space-y-2 mb-0">
+            <li><strong>Atomic Updates:</strong> A single entry point for an alert that propagates to all channels simultaneously.</li>
+            <li><strong>Webhook Architecture:</strong> Automated "push" notifications to official apps, RSS feeds, and social media APIs (X, Mastodon, Facebook) via server-side hooks.</li>
+            <li><strong>Audit Logging:</strong> A transparent, publicly accessible log of all alerts, ensuring accountability for service failures.</li>
+          </ul>
+        </div>
 
-        <h3 class="text-xl font-bold mb-4 mt-8">3.2 Compliance with Gov Design System</h3>
+        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.2 Standardized Data Exports (The "Spokes")</h3>
+        <p class="mb-6">
+          To ensure platform neutrality, the data must be exported in standardized, non-proprietary formats:
+        </p>
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="border-t border-slate-200 pt-4">
+            <h4 class="font-bold text-brand-text uppercase text-sm mb-2 italic tracking-widest text-brand-accent underline underline-offset-4 decoration-2">GTFS-Realtime (Service Alerts)</h4>
+            <p class="text-sm">The industry standard for real-time transit info. Mandating the full use of the <code>ServiceAlerts</code> feed ensures that Google Maps, Apple Maps, and independent apps show the <strong>exact same data</strong> as the official site.</p>
+          </div>
+          <div class="border-t border-slate-200 pt-4">
+            <h4 class="font-bold text-brand-text uppercase text-sm mb-2 italic tracking-widest text-brand-accent underline underline-offset-4 decoration-2 text-brand-accent">Sovereign RSS/Atom</h4>
+            <p class="text-sm">A "low-tech" but highly accessible standard. RSS allows local community groups, radio stations, and individual developers to subscribe to alerts without API keys or complex integrations.</p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.3 The "Mirror" Model for Social Media</h3>
         <p>
-          The <em>Government of Ireland Design System</em> already mandates that the official website must be the "Single Source of Truth." This brief calls for the strict enforcement of this standard as a condition for NTA funding and operator contracts.
+          Social media should function purely as a <strong>read-only mirror</strong> of the official CMS. Operators should be discouraged from manual "Twitter-only" commentary. Any detail provided on social media must, by definition, be a subset of the detail available on the official state-owned SSOT.
         </p>
       </section>
 
