@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
           Sovereign Public<br/> Information Standards
         </h1>
         <div class="flex flex-col md:flex-row gap-8 text-sm uppercase font-bold text-slate-500">
-          <div><span class="text-slate-400">To:</span> National Transport Authority (NTA)</div>
+          <div><span class="text-slate-400">To:</span> Irish Public Bodies & Regulatory Authorities</div>
           <div><span class="text-slate-400">Date:</span> May 2026</div>
           <div><span class="text-slate-400">Ref:</span> OPI-2026-001</div>
         </div>
@@ -20,97 +20,79 @@ import Layout from '../layouts/Layout.astro';
       <section class="mb-16">
         <h2 class="text-3xl font-black uppercase mb-6">Executive Summary</h2>
         <p class="text-xl leading-relaxed">
-          Current communication practices among Irish public transport providers frequently treat private, third-party social media platforms (specifically X/Twitter) as primary notification hubs for real-time disruptions. This creates a <strong>Two-Tier Information System</strong> that excludes citizens based on platform membership and private data tracking consent.
+          Current communication practices among Irish public bodies—including transport providers, local authorities, and emergency services—frequently treat private, account-gated social media platforms as primary notification hubs. This creates a <strong>Two-Tier Information System</strong> that excludes citizens based on platform membership.
         </p>
         <p class="text-xl leading-relaxed">
-          This brief proposes a <strong>"Source First"</strong> notification standard, mandating that state-owned digital infrastructure serves as the <strong>Single Source of Truth (SSOT)</strong> for all public interest updates.
+          This brief proposes a <strong>"Source First"</strong> notification standard. It advocates for a <strong>decentralized architecture</strong> where each public body maintains its own digital sovereignty by publishing data to its own domain in a standardized, machine-readable format.
         </p>
       </section>
 
       <section class="mb-16">
-        <h2 class="text-3xl font-black uppercase mb-6">1. The Problem: Siloed Real-Time Data</h2>
+        <h2 class="text-3xl font-black uppercase mb-6">1. The Problem: The "Gatekeeper" Model</h2>
         <p>
-          While public transport providers have made strides in publishing static timetable data (GTFS), <strong>unplanned disruption data</strong> remains architecturally siloed. 
+          Whether it is a train delay, a water main burst, or a public health alert, vital information is increasingly "walled off" within private ecosystems.
         </p>
         <ul class="space-y-4">
-          <li><strong>Gated Access:</strong> Vital safety and service updates are increasingly "walled off" behind social media logins.</li>
-          <li><strong>Algorithmic Fragility:</strong> Chronological delivery of urgent info is now subject to private company algorithms, meaning "Live" updates are often seen hours late by users.</li>
-          <li><strong>Regulatory Non-Compliance:</strong> Exclusive social media publishing fails to meet the <em>Public Sector Bodies Accessibility Regulations</em>, as these platforms are not under the control or accessibility auditing of the state.</li>
+          <li><strong>Gated Access:</strong> Citizens are often practically coerced into creating third-party accounts just to receive real-time updates from state-funded bodies.</li>
+          <li><strong>Data Dependency:</strong> Public bodies have become dependent on the algorithms and uptime of private, foreign-owned corporations for essential public communication.</li>
+          <li><strong>Accessibility Failure:</strong> Social-media-first publishing fails to meet statutory accessibility obligations, as these platforms are outside the control and auditing of the state.</li>
         </ul>
       </section>
 
       <section class="mb-16 bg-slate-100 p-8 border-l-8 border-brand-text">
-        <h2 class="text-3xl font-black uppercase mb-6 italic text-brand-accent">2. The "Source First" Requirement</h2>
+        <h2 class="text-3xl font-black uppercase mb-6 italic text-brand-accent">2. The "Source First" Architecture</h2>
         <p class="text-lg mb-6">
-          We propose that all NTA-regulated bodies adopt a <strong>Source First Workflow</strong>. Architectural priority must be given to the official state domain.
+          We propose a <strong>Federated Publication Model</strong>. Instead of a central hub, each body owns its own data and publishes it to its own infrastructure first.
         </p>
-        <div class="grid md:grid-cols-2 gap-8 mb-8">
-          <div class="bg-white p-6 shadow-sm border border-slate-200">
-            <h3 class="font-bold uppercase text-xs mb-2 text-slate-400 tracking-widest">Current (Broken) Workflow</h3>
-            <p class="text-sm text-slate-600 font-mono">Incident &rarr; Manual Tweet &rarr; (Optional) Website Update &rarr; (Delayed) App Update.</p>
-            <p class="text-xs text-red-600 mt-4 font-bold">Result: Data Fragmentation & Platform Gating</p>
-          </div>
-          <div class="bg-white p-6 shadow-md border-t-4 border-brand-accent">
-            <h3 class="font-bold uppercase text-xs mb-2 text-brand-accent tracking-widest text-brand-text">Proposed Sovereign Workflow</h3>
-            <p class="text-sm text-brand-text font-mono font-bold">Incident &rarr; Central CMS &rarr; Immediate Web/App/Open-API Push &rarr; Automated Social Media Mirror.</p>
-            <p class="text-xs text-green-700 mt-4 font-bold text-brand-text">Result: 100% Reach & Data Integrity</p>
-          </div>
+        <div class="bg-white p-6 shadow-md border-t-4 border-brand-accent mb-8">
+          <h3 class="font-bold uppercase text-xs mb-2 text-brand-accent tracking-widest text-brand-text">The Sovereign Publication Workflow</h3>
+          <p class="text-sm text-brand-text font-mono font-bold leading-relaxed">
+            [Public Body Incident] &rarr; [Internal CMS] &rarr; [Official Website / API] &rarr; [Automated Social Media Mirror]
+          </p>
+          <p class="text-xs text-green-700 mt-4 font-bold text-brand-text">Benefit: The official website remains the Single Source of Truth (SSOT).</p>
         </div>
       </section>
 
       <section class="mb-16">
-        <h2 class="text-3xl font-black uppercase mb-6">3. Technical Architecture</h2>
+        <h2 class="text-3xl font-black uppercase mb-6">3. Technical Requirements</h2>
         
-        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.1 Unified Alert Ingestion (The "Hub")</h3>
+        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.1 Edge Ownership of Data</h3>
         <p class="mb-6">
-          The NTA should implement or mandate a <strong>Unified Alert Ingestion API</strong>. Instead of operators managing disparate social media accounts, they should interface with a single, state-owned Content Management System (CMS) designed for high-availability alert distribution.
+          Each public body (e.g., Irish Rail, Dublin City Council, HSE) must be responsible for the "edge" publication of their own alerts. By publishing to their own domain (e.g., <code>council.ie/alerts</code>), they ensure that the data remains accessible even if third-party social networks are unavailable or restricted.
         </p>
-        <div class="bg-slate-50 border border-slate-200 p-6 mb-8 rounded">
-          <h4 class="text-sm font-black uppercase mb-3">Core CMS Requirements:</h4>
-          <ul class="text-sm space-y-2 mb-0">
-            <li><strong>Atomic Updates:</strong> A single entry point for an alert that propagates to all channels simultaneously.</li>
-            <li><strong>Webhook Architecture:</strong> Automated "push" notifications to official apps, RSS feeds, and social media APIs (X, Mastodon, Facebook) via server-side hooks.</li>
-            <li><strong>Audit Logging:</strong> A transparent, publicly accessible log of all alerts, ensuring accountability for service failures.</li>
-          </ul>
-        </div>
 
-        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.2 Standardized Data Exports (The "Spokes")</h3>
+        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.2 Universal Standards for Aggregation</h3>
         <p class="mb-6">
-          To ensure platform neutrality, the data must be exported in standardized, non-proprietary formats:
+          While publication is decentralized, <strong>data formats must be standardized</strong>. This allows regulatory bodies (like the NTA or Department of Health) and independent developers to aggregate alerts into unified dashboards without manual intervention.
         </p>
         <div class="grid md:grid-cols-2 gap-6 mb-8">
           <div class="border-t border-slate-200 pt-4">
-            <h4 class="font-bold text-brand-text uppercase text-sm mb-2 italic tracking-widest text-brand-accent underline underline-offset-4 decoration-2">GTFS-Realtime (Service Alerts)</h4>
-            <p class="text-sm">The industry standard for real-time transit info. Mandating the full use of the <code>ServiceAlerts</code> feed ensures that Google Maps, Apple Maps, and independent apps show the <strong>exact same data</strong> as the official site.</p>
+            <h4 class="font-bold text-brand-text uppercase text-sm mb-2 italic tracking-widest text-brand-accent underline underline-offset-4 decoration-2">Standardized JSON/RSS</h4>
+            <p class="text-sm">A baseline requirement for all bodies. Every alert must be available as a machine-readable entry on the official domain, allowing for simple scraping or polling by news outlets and community groups.</p>
           </div>
           <div class="border-t border-slate-200 pt-4">
-            <h4 class="font-bold text-brand-text uppercase text-sm mb-2 italic tracking-widest text-brand-accent underline underline-offset-4 decoration-2 text-brand-accent">Sovereign RSS/Atom</h4>
-            <p class="text-sm">A "low-tech" but highly accessible standard. RSS allows local community groups, radio stations, and individual developers to subscribe to alerts without API keys or complex integrations.</p>
+            <h4 class="font-bold text-brand-text uppercase text-sm mb-2 italic tracking-widest text-brand-accent underline underline-offset-4 decoration-2 text-brand-accent">GTFS-Realtime (Transit)</h4>
+            <p class="text-sm">Specific to the transport sector. The <code>ServiceAlerts</code> feed must be used as the primary broadcast method, ensuring that third-party maps and official apps stay in sync with the source.</p>
           </div>
         </div>
-
-        <h3 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-700">3.3 The "Mirror" Model for Social Media</h3>
-        <p>
-          Social media should function purely as a <strong>read-only mirror</strong> of the official CMS. Operators should be discouraged from manual "Twitter-only" commentary. Any detail provided on social media must, by definition, be a subset of the detail available on the official state-owned SSOT.
-        </p>
       </section>
 
       <section class="mb-16 border-t-4 border-slate-200 pt-12">
         <h2 class="text-3xl font-black uppercase mb-6">Recommendations</h2>
         <ol class="space-y-6">
           <li class="pl-4">
-            <strong>Mandate SSOT:</strong> Legally require all state-funded bodies to publish real-time alerts to their own domain <em>prior to</em> or <em>simultaneous with</em> third-party networks.
+            <strong>Enforce SSOT Policy:</strong> Mandate that all state-funded bodies publish real-time alerts to their own domain as a prerequisite for funding.
           </li>
           <li class="pl-4">
-            <strong>Audit Accessibility:</strong> Conduct a formal audit of how social-media-first communication excludes citizens with disabilities and the elderly.
+            <strong>Implement Automated Mirroring:</strong> Replace manual social media posting with automated "push-from-web" workflows to ensure data parity.
           </li>
           <li class="pl-4">
-            <strong>Standardize Open Feeds:</strong> Provide a unified API endpoint for all NTA-regulated service alerts.
+            <strong>Open Data Mandate:</strong> Require that all public safety, transport, and utility alerts be published in open, non-proprietary formats (RSS, JSON, GTFS-R).
           </li>
         </ol>
       </section>
 
-      <footer class="mt-24 pt-12 border-t border-slate-200 text-slate-500 italic">
+      <footer class="mt-24 pt-12 border-t border-slate-200 text-slate-500 italic text-sm">
         <p>This document was drafted by the OpenPublicInfo.ie initiative. For technical consultation or further briefing, contact <a href="mailto:munim2020@gmail.com" class="text-brand-accent underline">Munim Kazia</a>.</p>
       </footer>
     </article>
