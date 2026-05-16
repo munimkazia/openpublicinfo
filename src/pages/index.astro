@@ -2,99 +2,139 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Public Info, Public Access">
-	<header class="container">
-		<h1>Public Info,<br/>Public Access.</h1>
-		<p class="lead">Stop providing public information exclusively on private social networks.</p>
-		<a href="https://my.uplift.ie/petitions/public-info-public-access-stop-providing-public-info-on-private-social-networks" class="cta-button">Sign the Petition</a>
-	</header>
+<Layout title="Public Info, Public Access | OpenPublicInfo.ie">
+  <header class="py-20 bg-brand-text text-white">
+    <div class="container-tight">
+      <h1 class="text-6xl md:text-8xl mb-6">
+        Public Info,<br/>
+        <span class="text-brand-accent">Public Access.</span>
+      </h1>
+      <p class="text-xl md:text-2xl font-medium mb-8 leading-relaxed opacity-90">
+        Publicly funded information belongs on public platforms. We are demanding a "Source First" notification standard for all Irish state bodies.
+      </p>
+      <a href="https://my.uplift.ie/petitions/public-info-public-access-stop-providing-public-info-on-private-social-networks" class="btn-primary">
+        Sign the Petition
+      </a>
+    </div>
+  </header>
 
-	<main class="container">
-		<section id="problem">
-			<h2>The Problem</h2>
-			<p>
-				Many Irish government services and public bodies now use private social networks as their <strong>primary or only</strong> channel for real-time updates. 
-			</p>
-			<p>
-				Whether it's train delays from <strong>Irish Rail</strong>, weather warnings from <strong>Met Éireann</strong>, or local council alerts, vital public information is being locked behind "walled gardens."
-			</p>
-			
-			<div class="card">
-				<h3>Why this is broken:</h3>
-				<ul>
-					<li><strong>Accessibility:</strong> Social networks are often not fully accessible to screen readers or those with cognitive disabilities.</li>
-					<li><strong>Privacy:</strong> Citizens should not have to be tracked by a private corporation to know if their train is on time.</li>
-					<li><strong>Account Requirements:</strong> Many platforms now limit viewing content unless you are logged in, effectively taxing public info with personal data.</li>
-					<li><strong>Fragility:</strong> A change in a private company's algorithm or API shouldn't break the government's ability to reach its people.</li>
-				</ul>
-			</div>
-		</section>
+  <main class="py-20">
+    <!-- The Systemic Problem -->
+    <section class="container-tight mb-24">
+      <h2 class="text-4xl mb-8">A Routine Exclusion</h2>
+      <div class="prose prose-slate max-w-none">
+        <p class="text-xl leading-relaxed mb-6">
+          This isn't about a single delayed train or a one-off technical glitch. It is a <strong>systemic failure</strong> of public communication.
+        </p>
+        <p class="text-lg mb-6">
+          Irish Rail, the NTA, and local authorities have developed a routine of publishing critical real-time updates exclusively on private social media platforms like X (formerly Twitter). 
+        </p>
+        
+        <div class="bg-slate-100 p-8 border-l-8 border-brand-accent mb-8">
+          <h3 class="text-2xl mb-4 text-brand-text">Case Study: The GAA Match Blindspot</h3>
+          <p class="mb-4">
+            During major events—such as the recent Dublin v Westmeath match—Irish Rail routinely provides "additional services" information to their followers on X. 
+          </p>
+          <p>
+            Simultaneously, the official "Live Map" and "Alerts" pages on their own website remain empty. If you don't have an account, or if the algorithm doesn't show you the post, you are effectively locked out of public information you paid for.
+          </p>
+        </div>
 
-		<section id="examples">
-			<h2>Real-World Impact</h2>
-			<p>
-				Imagine a tourist arriving in Dublin, or an elderly citizen without a smartphone. If <em>Irish Rail</em> only posts about a major service disruption on Twitter, these people are left in the dark. Public information must be <strong>publicly accessible by default</strong>.
-			</p>
-		</section>
+        <p class="text-lg">
+          This creates a <strong>two-tier information system</strong>. It excludes the elderly, the privacy-conscious, and anyone who refuses to be tracked by a private corporation just to know if their transport is running.
+        </p>
+      </div>
+    </section>
 
-		<section id="solutions">
-			<h2>A Technical Roadmap</h2>
-			<p>
-				We aren't asking the government to stop using social media. We are asking them to change the <strong>Source of Truth</strong>.
-			</p>
-			
-			<h3>1. The Hub & Spoke Model</h3>
-			<p>
-				Government updates should originate on <code>.gov.ie</code> or service-owned domains. This "Hub" then pushes updates to the "Spokes" (Twitter, Mastodon, Email).
-			</p>
+    <!-- The Technical Manifesto -->
+    <section class="bg-slate-900 text-white py-24 mb-24">
+      <div class="container-tight">
+        <h2 class="text-4xl mb-12 text-brand-accent">The Technical Manifesto</h2>
+        
+        <div class="grid gap-12">
+          <div class="border-t border-slate-700 pt-8">
+            <span class="text-brand-accent font-bold text-5xl mb-4 block">01</span>
+            <h3 class="text-2xl mb-4">Source-First Notification (SSOT)</h3>
+            <p class="text-slate-300 text-lg">
+              Official state-owned websites and apps must be the Single Source of Truth. Vital info must be published there <em>before</em> or <em>simultaneously</em> with any third-party network.
+            </p>
+          </div>
 
-			<h3>2. Open Standards (RSS/JSON)</h3>
-			<p>
-				By providing simple RSS or JSON feeds, the government allows any app, website, or developer to build tools that help citizens, without relying on a single private platform.
-			</p>
+          <div class="border-t border-slate-700 pt-8">
+            <span class="text-brand-accent font-bold text-5xl mb-4 block">02</span>
+            <h3 class="text-2xl mb-4">Platform Neutrality</h3>
+            <p class="text-slate-300 text-lg">
+              Essential safety, travel, and health notifications must never require a private account, a login, or acceptance of third-party tracking cookies.
+            </p>
+          </div>
 
-			<div class="card">
-				<h3>The "Internal-First" Workflow:</h3>
-				<ol>
-					<li>Official posts update to internal CMS.</li>
-					<li>Website updates immediately.</li>
-					<li>RSS/Atom feed is generated.</li>
-					<li>Automated tools push content to social media APIs.</li>
-				</ol>
-			</div>
-		</section>
+          <div class="border-t border-slate-700 pt-8">
+            <span class="text-brand-accent font-bold text-5xl mb-4 block">03</span>
+            <h3 class="text-2xl mb-4">Open Data / Sovereign APIs</h3>
+            <p class="text-slate-300 text-lg">
+              Public bodies must publish standardized RSS or JSON feeds. This allows citizens, independent developers, and local media to distribute info safely without corporate gatekeepers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<section id="cta">
-			<h2>Take Action</h2>
-			<p>
-				Join over [X] citizens demanding that our public services return to being truly public.
-			</p>
-			<a href="https://my.uplift.ie/petitions/public-info-public-access-stop-providing-public-info-on-private-social-networks" class="cta-button">Sign the Uplift Petition</a>
-		</section>
-	</main>
+    <!-- FAQ -->
+    <section class="container-tight mb-24">
+      <h2 class="text-4xl mb-12">Common Questions</h2>
+      <div class="space-y-12">
+        <div>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">"I use X and it’s convenient. Why change it?"</h3>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            We aren't asking them to stop using social media. We're asking them to stop using it <em>exclusively</em>. Convenience for some shouldn't come at the cost of excluding others. Everyone deserves the same real-time updates on a public, state-owned platform.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">"Does this create extra work for staff?"</h3>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Actually, it fixes a broken workflow. Currently, staff often "double-job" by manually posting to social media. A "Source First" approach automates the process: one update to the official system syncs to the website, the app, and social media simultaneously.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">"Is this just about train delays?"</h3>
+          <p class="text-lg text-slate-700 leading-relaxed">
+            Trains are the most visible example, but this is a standard for all public infrastructure—from the Gardaí and local councils to the HSE. Publicly funded information is a public good; it belongs on public infrastructure first.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Press -->
+    <section class="container-tight section-divider">
+      <div class="flex flex-col md:flex-row gap-12 items-start">
+        <div class="flex-1">
+          <h2 class="text-4xl mb-8">About the Campaign</h2>
+          <p class="text-lg mb-6">
+            <strong>OpenPublicInfo.ie</strong> is a citizen-led initiative started by Munim Kazia, a Senior Software Engineer based in Ireland. 
+          </p>
+          <p class="text-lg mb-8">
+            This isn't just a grievance; it's a call for better data architecture in our public services. We believe that digital sovereignty and public accessibility are core requirements for a modern state.
+          </p>
+          <a href="mailto:press@openpublicinfo.ie" class="text-brand-accent font-bold underline text-lg italic">Press Inquiries & Technical Briefing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-text text-slate-400 py-12 border-t border-slate-800">
+    <div class="container-tight text-center">
+      <p class="mb-4">&copy; {new Date().getFullYear()} Open Public Info Ireland. Built by citizens for citizens.</p>
+      <div class="flex justify-center gap-6">
+        <a href="https://my.uplift.ie/petitions/public-info-public-access-stop-providing-public-info-on-private-social-networks" class="hover:text-white underline">Sign Petition</a>
+        <a href="http://openpublicinfo.ie" class="hover:text-white underline">Manifesto</a>
+      </div>
+    </div>
+  </footer>
 </Layout>
 
 <style>
-	.lead {
-		font-size: 1.5rem;
-		font-weight: 500;
-		color: var(--muted);
-		max-width: 600px;
-	}
-
-	ul, ol {
-		margin-bottom: 1.5rem;
-		padding-left: 1.5rem;
-	}
-
-	li {
-		margin-bottom: 0.5rem;
-	}
-
-	code {
-		background: #eee;
-		padding: 0.2rem 0.4rem;
-		border-radius: 4px;
-		font-family: monospace;
-	}
+  /* Use Inter font for body */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 </style>
